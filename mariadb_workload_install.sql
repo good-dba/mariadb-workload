@@ -24,7 +24,7 @@ SOURCE ./stored_procedure/workload_proc_run_snapshot.sql
 SOURCE ./event/workload_event_schedule.sql
 
 UPDATE performance_schema.setup_consumers
-   SET statements_digest = 'YES'
+   SET enabled = 'YES'
  WHERE name = 'statements_digest';
 COMMIT;
 
